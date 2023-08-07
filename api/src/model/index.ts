@@ -2,7 +2,7 @@ import { DataTypes, Model } from 'sequelize';
 import db from '../config/database.config';
 
 
-interface UserAttributes {
+export interface UserAttributes {
     id: string;
     name: string;
     city: string;
@@ -18,6 +18,7 @@ UserInstance.init(
             type: DataTypes.UUIDV4,
             primaryKey: true,
             allowNull: false,
+            defaultValue: DataTypes.UUIDV4,
         },
         name: {
             type: DataTypes.STRING,
