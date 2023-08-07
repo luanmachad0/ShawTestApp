@@ -19,7 +19,7 @@ var storage = multer.diskStorage({
   },
   filename: (req: Request, file: Express.Multer.File, cb: FileNameCallback) => {
     console.log(file.originalname);
-    cb(null, `${Date.now()}-bezkoder-${file.originalname}`);
+    cb(null, `${Date.now()}-shaw-${file.originalname}`);
   },
 });
 
